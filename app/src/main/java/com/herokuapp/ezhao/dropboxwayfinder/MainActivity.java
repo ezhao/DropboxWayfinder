@@ -2,16 +2,27 @@ package com.herokuapp.ezhao.dropboxwayfinder;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
+    ArrayList<Room> rooms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        rooms = Room.fromJsonFile(this);
+        Log.i("EMILY", rooms.toString());
+        Room room = rooms.get(0);
+        Log.i("EMILY", room.getName());
+        Log.i("EMILY", room.getFloor());
+        Log.i("EMILY", room.getKey());
+        Log.i("EMILY", room.getSize());
+        Log.i("EMILY", room.getLandmarks().toString());
+        Log.i("EMILY", room.getLandmarks().get(0));
     }
 
     @Override
