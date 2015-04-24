@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvRoomName"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvLandmarks"
+        android:textSize="16sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_below="@id/tvRoomName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:textSize="14sp"
+        android:layout_below="@id/tvLandmarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvBullet"
+        android:text="@string/bullet"
+        android:textSize="14sp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:layout_below="@id/tvLandmarks"
+        android:layout_toEndOf="@id/tvSize"
+        android:layout_toRightOf="@id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvFloor"
+        android:textSize="14sp"
+        android:layout_below="@id/tvLandmarks"
+        android:layout_toEndOf="@id/tvBullet"
+        android:layout_toRightOf="@id/tvBullet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

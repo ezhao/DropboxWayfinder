@@ -5,24 +5,26 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import java.util.ArrayList;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 public class MainActivity extends ActionBarActivity {
+    @InjectView(R.id.lvSearchResults) ListView lvSearchResults;
     ArrayList<Room> rooms;
+    RoomAdapter roomAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         rooms = Room.fromJsonFile(this);
-        Log.i("EMILY", rooms.toString());
-        Room room = rooms.get(0);
-        Log.i("EMILY", room.getName());
-        Log.i("EMILY", room.getFloor());
-        Log.i("EMILY", room.getKey());
-        Log.i("EMILY", room.getSize());
-        Log.i("EMILY", room.getLandmarks().toString());
-        Log.i("EMILY", room.getLandmarks().get(0));
+        ButterKnife.inject(this);
+
+        roomAdapter = new RoomAdapter(this, rooms);
+        lvSearchResults.setAdapter(roomAdapter);
     }
 
     @Override
