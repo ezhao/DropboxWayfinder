@@ -5,9 +5,8 @@
 
     <EditText
         android:id="@+id/etRoomSearch"
-        android:textSize="64sp"
+        android:textSize="36sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
