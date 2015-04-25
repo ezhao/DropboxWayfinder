@@ -6,7 +6,10 @@
     <EditText
         android:id="@+id/etRoomSearch"
         android:textSize="36sp"
+        android:inputType="textCapWords"
         android:layout_centerHorizontal="true"
+        android:minWidth="40dp"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
